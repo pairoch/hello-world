@@ -1,0 +1,15 @@
+<HTML>
+<HEAD>
+<TITLE>Displaying a Simple DOM Document in a Browser Popup</TITLE>
+<SCRIPT LANGUAGE="JScript">
+function displayXml() {
+    var xmldoc = new ActiveXObject("MSXML2.DOMDocument.3.0");
+    xmldoc.loadXML("<root><child></child></root>");
+    alert(xmldoc.xml);
+}
+</SCRIPT>
+</HEAD>
+<BODY>
+<BUTTON onClick="displayXml();">Display XML</BUTTON>
+</BODY>
+</HTML>
